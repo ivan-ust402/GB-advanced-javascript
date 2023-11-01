@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 /*
 ###Задание 2
@@ -31,17 +31,17 @@ console.log("Задание 2");
 // Посетитель ресторана.
 class Client {
   constructor(firstname, lastname) {
-    this.firstname = firstname
-    this.lastname = lastname
+    this.firstname = firstname;
+    this.lastname = lastname;
   }
 }
 
 // Вам необходимо реализовать класс, который управляет заказами и поварами.
 class Manager {
   constructor(chefs, dishes) {
-    this.chefs = chefs
-    this.dishes = dishes
-    this.orderList = new Map()
+    this.chefs = chefs;
+    this.dishes = dishes;
+    this.orderList = new Map();
   }
   createNewOrderObj(order) {
     const infoAboutOrder = {};
@@ -152,7 +152,7 @@ manager.newOrder(
   new Client("Иван", "Иванов"),
   { name: "Маргарита", quantity: 1, type: "Пицца" },
   { name: "Пепперони", quantity: 2, type: "Пицца" },
-  { name: "Чизкейк", quantity: 1, type: "Десерт" }
+  { name: "Чизкейк", quantity: 1, type: "Десерт" },
 );
 // Вывод:
 // Клиент Иван заказал:
@@ -166,7 +166,7 @@ const clientPavel = new Client("Павел", "Павлов");
 manager.newOrder(
   clientPavel,
   { name: "Филадельфия", quantity: 5, type: "Суши" },
-  { name: "Калифорния", quantity: 3, type: "Суши" }
+  { name: "Калифорния", quantity: 3, type: "Суши" },
 );
 // Вывод:
 // Клиент Павел заказал:
@@ -176,7 +176,7 @@ manager.newOrder(
 manager.newOrder(
   clientPavel,
   { name: "Калифорния", quantity: 1, type: "Суши" },
-  { name: "Тирамису", quantity: 2, type: "Десерт" }
+  { name: "Тирамису", quantity: 2, type: "Десерт" },
 );
 // Вывод:
 // Клиент Павел заказал:
@@ -187,25 +187,25 @@ manager.newOrder(
 // manager.newOrder(
 //   clientPavel,
 //   { name: "Калифорния", quantity: 1, type: "Суши" },
-//   { name: "Тирамису", quantity: 2, type: "Десерт" }
+//   { name: "Тирамису", quantity: 2, type: "Десерт" },
 // );
 
 // manager.newOrder(
 //   clientPavel,
 //   { name: "Калифорния", quantity: 1, type: "Суши" },
-//   { name: "Тирамису", quantity: 2, type: "Десерт" }
+//   { name: "Тирамису", quantity: 2, type: "Десерт" },
 // );
 
 // manager.newOrder(
 //   clientPavel,
 //   { name: "Калифорния", quantity: 1, type: "Суши" },
-//   { name: "Тирамису", quantity: 2, type: "Десерт" }
+//   { name: "Тирамису", quantity: 2, type: "Десерт" },
 // );
 
 manager.newOrder(
   clientPavel,
   { name: "Филадельфия", quantity: 1, type: "Суши" },
-  { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" }
+  { name: "Трубочка с вареной сгущенкой", quantity: 1, type: "Десерт" },
 );
 // Ничего не должно быть добавлено, должна быть выброшена ошибка:
 // Десерт "Трубочка с вареной сгущенкой" - такого блюда не существует.
@@ -214,5 +214,5 @@ manager.newOrder(
 //   clientPavel,
 //   { name: "Маргарита", quantity: 1, type: "Пицца" },
 //   { name: "Пепперони", quantity: 2, type: "Пицца" },
-//   { name: "Чизкейк", quantity: 1, type: "Десерт" }
+//   { name: "Чизкейк", quantity: 1, type: "Десерт" },
 // );
