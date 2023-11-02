@@ -54,19 +54,19 @@ class Manager {
   setOrderList(client, orders) {
     const infoAboutOrders = [];
     for (const order of orders) {
-      this.hasDish(order);
+      this.ensureDishExists(order);
       infoAboutOrders.push(this.createNewOrderObj(order));
     }
     this.orderList.set(client, infoAboutOrders);
   }
-  hasDish(order) {
+  ensureDishExists(order) {
     if (this.dishes.get(order.type).has(order.name)) {
       return true;
     } else {
       throw new Error("Такого блюда нет!");
     }
   }
-  addNewOrderToExistClient(currentOrderArray, newOrderArray) {
+  addNewOrderToExistOrderList(currentOrderArray, newOrderArray) {
     const newPositionsArray = newOrderArray.filter(
       (el) =>
         currentOrderArray.findIndex(
@@ -82,7 +82,7 @@ class Manager {
 
     if (repeatPositionsArray.length) {
       for (const repeatOrder of repeatPositionsArray) {
-        if (this.hasDish(repeatOrder)) {
+        if (this.ensureDishExists(repeatOrder)) {
           for (const currentOrder of currentOrderArray) {
             if (
               currentOrder.type === repeatOrder.type &&
@@ -97,7 +97,7 @@ class Manager {
 
     if (newPositionsArray.length) {
       for (const newPositon of newPositionsArray) {
-        if (this.hasDish(newPositon)) {
+        if (this.ensureDishExists(newPositon)) {
           currentOrderArray.push(this.createNewOrderObj(newPositon));
         }
       }
@@ -115,7 +115,7 @@ class Manager {
   }
   newOrder(client, ...orders) {
     if (this.orderList.has(client)) {
-      this.addNewOrderToExistClient(this.orderList.get(client), orders);
+      this.addNewOrderToExistOrderList(this.orderList.get(client), orders);
     } else {
       this.setOrderList(client, orders);
     }
