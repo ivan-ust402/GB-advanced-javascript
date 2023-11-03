@@ -19,6 +19,8 @@
 книга в списке или нет.
 */
 
+console.log('--------------------------------------------');
+console.log('Задание 1');
 class Library {
     #books = [];
     constructor(books) {

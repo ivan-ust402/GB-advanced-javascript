@@ -6,8 +6,33 @@
   <title>Document</title>
   <script src="1.js" defer></script>
   <script src="2.js" defer></script>
+  <style>
+    #products {
+      padding-left: calc(50% - 550px);
+      padding-right: calc(50% - 550px);
+      padding-top: 50px;
+      padding-bottom: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    .card {
+      width: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .card__review-item {
+      width: 360px;
+      word-wrap: break-word;
+    } 
+    .card__review-error {
+      width: 360px;
+      color: red;
+    }
+  </style>
 </head>
 <body>
-  
+  <div id="products"></div>
 </body>
 </html>
