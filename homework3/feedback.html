@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
+    <link rel="stylesheet" href="style.css" />
     <script src="functions.js"></script>
     <script src="feedback.js"></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="feedback center">
+      <h1 class="feedback__title">Оставьте Ваш отзыв о продукте</h1>
+      <form class="feedback__form">
+        <label class="feedback__label">
+          Наименование товара:
+          <input
+            type="text"
+            class="feedback__input feedback__product-name"
+            placeholder="Введите название товара..."
+          />
+        </label>
+        <label class="feedback__label feedback__label_textarea">
+          Ваш отзыв:
+          <textarea
+            cols="50"
+            rows="10"
+            class="feedback__input feedback__text"
+            placeholder="Опишите, что Вам понравилось в нашем товаре или что, на Ваш взгляд, можно было бы улучшить..."
+          ></textarea>
+        </label>
+        <button class="feedback__add-btn">Add Feedback</button>
+      </form>
+    </div>
+  </body>
 </html>
