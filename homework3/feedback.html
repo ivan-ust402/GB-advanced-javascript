@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feedback</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="functions.js"></script>
-    <script src="feedback.js"></script>
+    <script src="functions.js" defer></script>
+    <script src="feedback.js" defer></script>
   </head>
   <body>
     <div class="feedback center">
+      <button class="feedback__btn feedback__btn_back">На страницу товаров</button>
       <h1 class="feedback__title">Оставьте Ваш отзыв о продукте</h1>
       <form class="feedback__form">
         <label class="feedback__label">
@@ -29,7 +30,8 @@
             placeholder="Опишите, что Вам понравилось в нашем товаре или что, на Ваш взгляд, можно было бы улучшить..."
           ></textarea>
         </label>
-        <button class="feedback__add-btn">Add Feedback</button>
+        <button class="feedback__btn feedback__btn_add">Добавить отзыв</button>
+        <div class="feedback__message"></div>
       </form>
     </div>
   </body>

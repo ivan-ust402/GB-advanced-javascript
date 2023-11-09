@@ -15,6 +15,7 @@ body {
   padding-top: 50px;
   padding-bottom: 50px;
   color: #777;
+  position: relative;
 }
 .feedback__title {
   color: rgb(255, 196, 0);
@@ -49,7 +50,7 @@ body {
 .feedback__input:focus {
   cursor: default;
 }
-.feedback__add-btn {
+.feedback__btn {
   border-radius: 10px;
   padding: 10px;
   border: none;
@@ -59,7 +60,16 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.feedback__add-btn:hover {
+.feedback__btn:hover {
   background-color: rgb(255, 219, 100);
   color: #777;
+}
+.feedback__btn_back {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+}
+.feedback__message {
+  color: rgb(248, 19, 19);
+  padding: 10px;
 }/*# sourceMappingURL=style.css.map */
