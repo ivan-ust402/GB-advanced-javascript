@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <script src="functions.js" defer></script>
     <script src="products.js" defer></script>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="products center">
+      <button class="products__btn products__btn_to-feedback">
+        Написать отзыв
+      </button>
+      <div class="products__initial">
+        <p class="products__initial-text">Нет доступных к просмотру товаров</p>
+      </div>
+      <div class="products__list-block hide">
+        <h1 class="products__title">Список наших продуктов</h1>
+        <ul class="products__list">
+          <li class="products__item">
+            <div class="products__description">
+              <h3 class="products__item-title">1. Масло</h3>
+              <button class="products__toggle">Показать отзывы</button>
+            </div>
+            <div class="products__details">
+              <ul class="products__feedback-list">
+                <li class="products__feedback-item">
+                  <span>1.</span>
+                  <p class="products__feedback-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem id voluptatum architecto vel optio eaque animi,
+                    maxime dignissimos alias tenetur quos quisquam deleniti
+                    voluptates suscipit quae recusandae, cumque rem quidem! Iste
+                    facilis molestias, quis, eos reiciendis blanditiis hic
+                    dolorem laudantium officiis dolores commodi asperiores
+                    harum, ab maiores veniam magni ad! Consequatur libero quia
+                    fugit nisi praesentium? Quia necessitatibus ratione vel
+                    tempora. Consequuntur suscipit amet praesentium blanditiis,
+                    repellendus voluptatum consequatur placeat sint quos
+                    tenetur! Et placeat aliquid aut distinctio tenetur qui,
+                    beatae porro labore mollitia modi, voluptas cupiditate
+                    aliquam tempore? Excepturi voluptates tenetur quidem
+                    deleniti, neque eum reiciendis cumque dignissimos deserunt!
+                  </p>
+
+                  <button class="products__feedback-delete">&#10006;</button>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
 </html>
