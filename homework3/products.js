@@ -5,6 +5,8 @@ const initialEl = document.querySelector('.products__initial');
 const listEl = document.querySelector('.products__list-block');
 const productsEl = document.querySelector('.products');
 
+
+
 if(checkProductsData()) {
     toggleBlocks(initialEl, listEl);
 }
@@ -27,9 +29,9 @@ listEl.addEventListener('click', event => {
     if (target.classList.contains('products__feedback-delete')){
         const feedbackItemEl = target.closest('.products__feedback-item');
         const productItemEl = target.closest('.products__item');
-        const feedbackID = feedbackItemEl.dataset.reviewid;
-        const productID = productItemEl.dataset.productid;
-        deleteFeedbackItem(productID, feedbackID, productsEl);
+        const feedbackID = Number(feedbackItemEl.dataset.reviewid);
+        const productID = Number(productItemEl.dataset.productid);
+        deleteFeedbackItem(productID, feedbackID, initialEl, listEl , productItemEl);
     }
 })
 
